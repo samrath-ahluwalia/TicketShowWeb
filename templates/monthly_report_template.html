@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Entertainment Report</title>
+</head>
+<body>
+    <h2 style="text-align:center;">Monthly Entertainment Report for {{ user.username }} - {{ month }} {{ year }}</h2>
+    {% if bookings %}
+        <div>
+            <table>
+                <tr>
+                    <th>Show Name</th>
+                    <th>Show Genre</th>
+                    <th>Venue Name</th>
+                    <th>Venue Location</th>
+                    <th>Number of seats</th>
+                </tr>
+                {% for booking in bookings %}
+                    <tr>
+                        <td>{{ shows[booking].name }}</td>
+                        <td>{{ shows[booking].genre }}</td>
+                        <td>{{ venues[booking].name }}</td>
+                        <td>{{ venues[booking].location }}</td>
+                        <td>{{ booking.numberofseats }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% else %}
+        <div>
+            <h5 style="text-align: center;">You have not made any bookings this month. </h5>
+        </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div className = "container-fluid "id="app">
+          <div class="row">
+            <div class="column">
+                <router-view></router-view>
+            </div>
+          </div>
+    </div>
+    
+</body>
+<script src="https://unpkg.com/vue-router@3.0.0/dist/vue-router.js"></script>
+<script src="https://unpkg.com/vuex@3.0.0/dist/vuex.global.js"></script>
+<script type="module" src="{{ url_for('static', filename = 'js/app.js') }}"></script>
+</html>
